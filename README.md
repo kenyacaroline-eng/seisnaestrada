@@ -17,6 +17,8 @@
 *   **Mobile-First:** Totalmente adaptado para leitura em dispositivos móveis.
 *   **Performance:** Otimizado para carregar rápido mesmo em conexões de estrada (4G/Satélite).
 *   **UX Design:** Focado na experiência do usuário e na facilidade de navegação entre destinos.
+*   <img width="1356" height="572" alt="image" src="https://github.com/user-attachments/assets/d226e8f9-dd3d-497e-a1e6-16f631d4504c" />
+
 
 ---
 *Desenvolvido por Karol Carvalho enquanto cruza as estradas do Brasil.* 🛣️
