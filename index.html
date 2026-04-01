@@ -1,1 +1,219 @@
+<<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seis na Estrada | Vida a Bordo e Aventuras</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fcfcfc;
+            color: #1a1a1a;
+        }
+        h1, h2, h3, .serif {
+            font-family: 'Playfair Display', serif;
+        }
+        .hero-gradient {
+            background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 100%);
+        }
+        .nav-link {
+            position: relative;
+            transition: color 0.3s;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -2px;
+            left: 0;
+            background-color: #1a1a1a;
+            transition: width 0.3s;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .card-zoom:hover img {
+            transform: scale(1.05);
+        }
+        .image-container img {
+            transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+    </style>
+</head>
+<body>
 
+    <!-- Navegação Estilo GetOutside -->
+    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-8">
+                <a href="/" class="text-2xl font-extrabold tracking-tighter uppercase italic">Seis na Estrada</a>
+                <div class="hidden md:flex gap-6 text-xs font-semibold uppercase tracking-widest">
+                    <a href="#destinos" class="nav-link">Destinos</a>
+                    <a href="#vida-a-bordo" class="nav-link">Vida a Bordo</a>
+                    <a href="#sobre" class="nav-link">A Família</a>
+                    <a href="#loja" class="nav-link">Equipamentos</a>
+                </div>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="#" class="text-sm font-medium border border-black px-4 py-2 hover:bg-black hover:text-white transition uppercase tracking-tighter text-xs">Apoie a Jornada</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section: O Impacto Visual -->
+    <section class="relative h-screen w-full overflow-hidden flex items-end">
+        <img src="imagem/onibus e familia.jpg" 
+             alt="Família e Motorhome na estrada" 
+             class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 hero-gradient"></div>
+        
+        <div class="relative max-w-7xl mx-auto px-6 pb-24 w-full">
+            <span class="text-white/80 uppercase tracking-[0.3em] text-xs font-semibold mb-4 block">3 Anos de Liberdade</span>
+            <h1 class="text-white text-5xl md:text-7xl max-w-4xl leading-tight mb-8">
+                Explorando o mundo, <br><span class="serif italic">um quilómetro de cada vez.</span>
+            </h1>
+            <p class="text-white/90 text-lg md:text-xl max-w-xl mb-10 font-light">
+                Somos o João, a Carol e os nossos filhos Victor Gabriel 17 anos, João Henrique 10 anos 
+                e Heloísa e Elisa gêmeas de 5 anos. Vivemos, trabalhamos e crescemos a bordo 
+                do nosso motorhome. Bem-vindos à nossa casa sobre rodas.
+            </p>
+            <a href="#vida-a-bordo" class="inline-block bg-white text-black px-8 py-4 font-bold uppercase text-xs tracking-widest hover:bg-gray-200 transition">Descubra o Nosso Estilo de Vida</a>
+        </div>
+    </section>
+
+    <!-- Seção: Destinos Recentes -->
+    <section id="destinos" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="flex justify-between items-end mb-12">
+            <div>
+                <h2 class="text-4xl font-bold mb-2">Destinos Recentes</h2>
+                <p class="text-gray-500 uppercase tracking-widest text-xs">Onde as nossas rodas nos levaram</p>
+            </div>
+            <a href="#" class="text-sm font-bold border-b-2 border-black pb-1 hover:text-gray-600 transition">Ver todos os diários</a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <!-- Card 1 -->
+            <div class="card-zoom group cursor-pointer">
+                <div class="image-container overflow-hidden aspect-[3/4] mb-4 bg-gray-100">
+                    <img src="imagem/são luiz ma.jpg" alt="São Luis MA/Brasil" class="w-full h-full object-cover">
+                </div>
+                <span class="text-xs font-bold uppercase tracking-widest text-orange-600">São Luis MA/Brasil</span>
+                <h3 class="text-2xl mt-2 group-hover:underline">São Luis: Cidade tombada</h3>
+                <p class="text-gray-500 mt-3 text-sm line-clamp-2">São Luis uma cidade tombada com ricas tradições culturais e uma arquitetura única.</p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card-zoom group cursor-pointer">
+                <div class="image-container overflow-hidden aspect-[3/4] mb-4 bg-gray-100">
+                    <img src="imagem/alcantara.jpg" alt="Alpes" class="w-full h-full object-cover">
+                </div>
+                <span class="text-xs font-bold uppercase tracking-widest text-orange-600">Alcântara</span>
+                <h3 class="text-2xl mt-2 group-hover:underline">Cidade de Monumental</h3>
+                <p class="text-gray-500 mt-3 text-sm line-clamp-2"> Casario colonial, ruínas (Igreja de São Matias) e a maior população quilombola do Brasil.</p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card-zoom group cursor-pointer">
+                <div class="image-container overflow-hidden aspect-[3/4] mb-4 bg-gray-100">
+                    <img src="imagem/litoralnordeste.jpg" alt="Litoral" class="w-full h-full object-cover">
+                </div>
+                <span class="text-xs font-bold uppercase tracking-widest text-orange-600">Litoral</span>
+                <h3 class="text-2xl mt-2 group-hover:underline">Praias secretas do Nordeste</h3>
+                <p class="text-gray-500 mt-3 text-sm line-clamp-2">Encontramos o paraíso escondido entre dunas onde o sinal de internet era perfeito para trabalhar.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Storytelling: Vida a Bordo -->
+    <section id="vida-a-bordo" class="bg-[#1a1a1a] text-white py-32 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+            <div class="relative">
+                <div class="absolute -top-10 -left-10 w-32 h-32 border-l border-t border-white/20"></div>
+                <img src="imagem/motorhomerinterno.jpg" 
+                     alt="Interior do Motorhome" 
+                     class="w-full rounded-sm grayscale hover:grayscale-0 transition duration-700">
+                <div class="mt-6 flex gap-4 text-xs font-bold uppercase tracking-[0.2em] text-white/50">
+                    <span>Cozinha</span> <span>Home Office</span> <span>Educação</span>
+                </div>
+            </div>
+            <div>
+                <h2 class="text-4xl md:text-6xl mb-8 leading-tight">Viver em 38 metros quadrados <br><span class="serif italic">não é sobre espaço, é sobre liberdade.</span></h2>
+                <div class="space-y-6 text-gray-400 font-light leading-relaxed">
+                    <p>Muitos perguntam como é possível educar os filhos, trabalhar e manter a sanidade vivendo
+                     num espaço tão reduzido. A resposta é simples: o nosso jardim é o mundo inteiro.</p>
+                    <p>No canal @Seis na Estrada, abrimos as portas da nossa casa para mostrar a realidade 
+                    sem filtros. Manutenções, dias de chuva, o planejamento de rotas e as amizades que 
+                    fazemos pelo caminho.</p>
+                </div>
+                <div class="mt-10 flex gap-6">
+                    <a href="#" class="bg-white text-black px-6 py-3 font-bold text-xs uppercase tracking-widest">Ver Equipamentos</a>
+                    <a href="#" class="border border-white/30 text-white px-6 py-3 font-bold text-xs uppercase tracking-widest hover:border-white transition">Nossas Dicas</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Estilo Editorial -->
+    <section class="py-24 px-6 border-b border-gray-100">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-4">Receba os nossos Diários de Bordo</h2>
+            <p class="text-gray-500 mb-10">Uma vez por semana, partilhamos as nossas coordenadas, gastos reais e as melhores histórias da estrada.</p>
+            <form class="flex flex-col md:flex-row gap-4 justify-center">
+                <input type="email" placeholder="O seu melhor e-mail" class="bg-gray-100 border-none px-6 py-4 w-full md:w-80 focus:ring-2 focus:ring-black outline-none transition">
+                <button class="bg-black text-white px-10 py-4 font-bold text-xs uppercase tracking-widest hover:bg-zinc-800 transition">Subscrever</button>
+            </form>
+            <p class="mt-6 text-[10px] text-gray-400 uppercase tracking-widest">Respeitamos a sua privacidade. Sem spam, apenas aventura.</p>
+        </div>
+    </section>
+
+    <!-- Rodapé Minimalista -->
+    <footer class="py-20 px-6 max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-start gap-12">
+            <div class="max-w-xs">
+                <h4 class="text-xl font-extrabold uppercase italic mb-6">Seis na Estrada</h4>
+                <p class="text-sm text-gray-500 leading-relaxed">Uma família, um motorhome e o sonho de viver intensamente cada canto deste planeta.</p>
+            </div>
+            <div class="grid grid-cols-2 gap-20">
+                <div class="space-y-4">
+                    <h5 class="text-xs font-bold uppercase tracking-widest">Navegação</h5>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li><a href="#" class="hover:text-black">Destinos</a></li>
+                        <li><a href="#" class="hover:text-black">Dicas de RV</a></li>
+                        <li><a href="#" class="hover:text-black">Equipamentos</a></li>
+                        <li><a href="#" class="hover:text-black">Newsletter</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-4">
+                    <h5 class="text-xs font-bold uppercase tracking-widest">Siga-nos</h5>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li><a href="https://www.youtube.com/@seisnaestrada" class="hover:text-black" target="_blank">YouTube</a></li>
+                        <li><a href="https://www.instagram.com/seisnaestrada" class="hover:text-black" target="_blank">Instagram</a></li>
+                        <li><a href="https://www.tiktok.com/@seisnaestrada" class="hover:text-black" target="_blank">TikTok</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="mt-20 pt-10 border-t border-gray-100 flex flex-col md:flex-row justify-between text-[10px] text-gray-400 uppercase tracking-[0.2em]">
+            <span>&copy; 2026 Seis na Estrada. Todos os direitos reservados.</span>
+            <span>Feito com <i class="fa-solid fa-heart"></i> na estrada.</span>
+        </div>
+    </footer>
+
+    <!-- Scripts para ícones e interações -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script>
+        // Smooth Scroll simples
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
